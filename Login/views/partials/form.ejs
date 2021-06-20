@@ -1,0 +1,120 @@
+<div 
+style="z-index:12;
+display: block;
+text-align: center;
+background-color: #6c757d;
+margin-right: 5px;
+padding-right: 50px;
+color: white;
+position: absolute;
+width: 355px;
+margin-top: 4px;
+padding-top: 5px;
+right: 0px;
+border-radius: 10px;
+padding: 11px;
+font-size: 12px;">
+
+<button id="showbtn" onclick="showForm()" 
+style="padding-top: 0.3125rem;
+padding-bottom: 0.3125rem;
+margin-right: 1rem;
+font-size: 1.25rem;
+text-decoration: none;
+white-space: nowrap;
+background-color: #6c757d;
+color: white;
+border: none;"
+>Register Here</button>
+
+<div id="showForm" 
+style="display: none;
+padding-top: 20px;
+float: center;
+">
+    <form action='/register' method="POST">
+        <input class="register-control" type="text" name="firstname" placeholder="Firstname">
+        <input class="register-control" type="text" name="lastname" placeholder="Lastname">
+        <input class="register-control" type="text" name="address" placeholder="Address">
+        <div>
+            <input id="city-input" class="register-control" type="text" name="city" placeholder="City">
+            <input id="state-input" class="register-control" type="text" name="state" placeholder="State">
+            <input id="zip-input" class="register-control" type="text" name="zip" placeholder="Zip">
+        </div>
+        <label for="age" 
+        style="font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        padding-top: 10px;">Please select age range:</label>
+        <select name="age" 
+        style="background-color: #0d6efd;
+        border: none;
+        padding: 0 1em 0 0;
+        margin: 0;
+        width: 100%;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        cursor: inherit;">
+            <option value="select" >Select an Age</option>
+            <option value="10">10</option>
+            <option value="11-15">11-15</option>
+            <option value="16-20">16-20</option>
+            <option value="21+">21+</option>
+        </select>
+        <div style="margin: 3px;">
+            <label style="font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            padding-top: 10px;">Please select gender:</label>
+            <div>
+                <input type="radio" name="gender" value="Male">
+                    <label
+                    style="font-size: 1rem;
+                    font-weight: 400;
+                    line-height: 1.5;
+                    padding-right: 20px;">Male</label>
+                <input type="radio" name="gender" value="Female">
+                    <label style="font-size: 1rem;
+                    font-weight: 400;
+                    line-height: 1.5;
+                    padding-right: 20px;">Female</label>
+                <input type="radio" name="gender" value="Other">
+                    <label style="font-size: 1rem;
+                    font-weight: 400;
+                    line-height: 1.5;">Other</label>
+            </div>
+        </div>
+        <div>
+            <label for="consent" 
+            style="font-size: 1rem;
+                    font-weight: 400;
+                    line-height: 1.5;
+                    padding-top: 10px;"> Terms & Conditions</label><br>
+            <input type="checkbox" name="consent" value="Consent">
+            <label for="consent" 
+            style="font-size: 1rem;
+                    font-weight: 400;
+                    line-height: 1.5;
+                    padding-bottom: 10px;"> I Agree</label>
+        </div>
+        <textarea name="bio" rows="10" columns="10" placeholder="Bio..." class="register-control"></textarea>
+        <br>
+        <input type="submit" style="width: 100%; background-color: #0d6efd; border: none; border-radius: .25rem; color:white; font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        margin-top: 1rem;"">
+    </form>
+</div>
+</div>
+    
+<script type="text/javascript">
+    function showForm(){
+        var x = document.getElementById("showForm");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
